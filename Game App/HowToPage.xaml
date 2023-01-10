@@ -1,0 +1,16 @@
+﻿<Page
+    x:Class="Game_App.HowToPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Game_App"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource AppBarItemForegroundThemeBrush}" KeyDown="Page_KeyDown">
+
+    <Grid x:Name="Grid1" KeyDown="Grid_KeyDown">
+        <TextBlock HorizontalAlignment="Center" Margin="0,128,0,0" TextWrapping="Wrap" Text="How To Play" VerticalAlignment="Top" FontSize="72" Foreground="Black"/>
+        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="The game starts with a grid of varying sizes and 3 blocks on the bottom row moving back and forth, press the space bar to stop the blocks from moving. Another 3 blocks will appear on the row above the bottom row, and they will start moving. You should try to press the space bar to stop the blocks directly above the blocks on the first row. " VerticalAlignment="Center" Foreground="Black" Height="430" Width="978" FontSize="36" TextAlignment="Center"/>
+
+    </Grid>
+</Page>

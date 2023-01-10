@@ -1,0 +1,17 @@
+﻿<Page
+    x:Class="Game_App.StartPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Game_App"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="515,123,0,0" TextWrapping="Wrap" Text="Blocks" VerticalAlignment="Top" Width="480" Height="148" FontSize="72" TextAlignment="Center"/>
+        <Button x:Name="StartGameButton" Content="Start Game" Margin="337,625,0,0" VerticalAlignment="Top" Height="89" Width="382" FontSize="48" Click="StartGameButton_Click"/>
+        <Button x:Name="HowToPlayButton" Content="How to Play" Margin="875,625,0,0" VerticalAlignment="Top" Height="89" Width="382" FontSize="48" Click="HowToPlayButton_Click"/>
+
+    </Grid>
+</Page>
