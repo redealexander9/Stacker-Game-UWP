@@ -112,6 +112,7 @@ namespace Game_App
        
         private void RestartGame()
         {
+            GameBoard.Children.Clear();
             timer = new DispatcherTimer
             {
                 Interval = new TimeSpan(0, 0, 0, 0, Speed)
