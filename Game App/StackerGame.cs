@@ -144,8 +144,6 @@ namespace Game_App
 
             for (int i = 0; i < Grid.GetLength(0); i++)
             {
-                Debug.WriteLine("I: " + i + "   C: " + C);
-
 
                 if (Grid[i, C])
                 {
@@ -154,8 +152,6 @@ namespace Game_App
                     return Position;
                     
                 }
-                
-
 
             }
             Position.X = 3;

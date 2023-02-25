@@ -142,12 +142,14 @@ namespace Game_App
             if (Result == ContentDialogResult.Primary)
             {
                 RestartGame();
-                
-
-
-
+            }
+            else
+            {
+                this.Frame.Navigate(typeof(StartPage));
 
             }
+
+
 
 
         }
@@ -202,9 +204,10 @@ namespace Game_App
             CountdownText.Visibility = Visibility.Collapsed;
         }
 
-        private void StopBlocksButton_PreviewKeyDown(object sender, KeyRoutedEventArgs e)
+        private void StopBlocksButton_PreviewKeyDown(object sender, KeyRoutedEventArgs e)   // User pressed space bar
         {
             GoToNextRow();
+            StopBlocksButton.IsEnabled = false;
         }
 
         private void GoToNextRow()
@@ -218,7 +221,7 @@ namespace Game_App
             Game.YPosition = 0;
             Game.Direction = 1;
             Game.IsLayerChanging = true;
-            if(NextRow == -1)
+            if(NextRow == -1)   // User reached the top
             {
                 GameWon();
             }
@@ -226,6 +229,7 @@ namespace Game_App
             {
                 NextRow--;
                 timer.Start();
+                StopBlocksButton.IsEnabled = true;
             }
         }
 
