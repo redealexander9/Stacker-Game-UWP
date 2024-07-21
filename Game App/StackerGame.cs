@@ -127,16 +127,7 @@ namespace Game_App
             }
 
 
-
-
-           
-
-
-
-
-
         }
-
 
         public Point IsBlockBelow(int C)
         {
@@ -158,16 +149,6 @@ namespace Game_App
             Position.Y = 3;
             return Position;
         }
-
-
-
-
-
-
-
-
-
-        
 
         public void StartAnimation(object sender, object e)
         {

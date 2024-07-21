@@ -6,14 +6,14 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource AppBarItemForegroundThemeBrush}" Height="1086" Width="1541">
+    Background="{ThemeResource AppBarItemForegroundThemeBrush}" Height="1086" Width="1541"
+    KeyDown="Page_StopBlocks"
+    IsTabStop="True">
     <Grid x:Name="Grid">
 
         <Canvas x:Name="GameBoard" Margin="375,6,375,294" MinWidth="1" Width="750" Height="700" />
-        <Button x:Name="StopBlocksButton" Content="Start Game" Margin="0,795,0,0" VerticalAlignment="Top" Height="108" Width="472" HorizontalAlignment="Center" Background="#FF5D5454" IsEnabled="False" PreviewKeyDown="StopBlocksButton_PreviewKeyDown"/>
-        <TextBlock x:Name="CountdownText" HorizontalAlignment="Left" Margin="618,114,0,0" TextWrapping="Wrap" Text="3" VerticalAlignment="Top" Width="275" Height="220" RenderTransformOrigin="0.5,0.5" FontSize="150" Foreground="Black" TextAlignment="Center">
-
-        </TextBlock>
+        <!--<Button x:Name="StopBlocksButton" Content="Start Game" Margin="0,795,0,0" VerticalAlignment="Top" Height="108" Width="472" HorizontalAlignment="Center" Background="#FF5D5454" IsEnabled="False" PreviewKeyDown="StopBlocksButton_PreviewKeyDown"/>-->
+        <TextBlock x:Name="CountdownText" HorizontalAlignment="Left" Margin="618,114,0,0" TextWrapping="Wrap" Text="3" VerticalAlignment="Top" Width="275" Height="220" RenderTransformOrigin="0.5,0.5" FontSize="150" Foreground="Black" TextAlignment="Center"></TextBlock>
 
     </Grid>
 

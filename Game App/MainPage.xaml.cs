@@ -48,7 +48,37 @@ namespace Game_App
             timer.Tick += Game.StartAnimation;
             timer.Tick += RedrawGrid;
             CreateGrid();
+            this.Loaded += MainPage_Loaded;
+            SystemNavigationManager.GetForCurrentView().BackRequested += OnBackRequested;
+        }
 
+        private void PrintNavigationStack()
+        {
+            var frame = Frame;
+            if (frame == null)
+            {
+                Debug.WriteLine("Frame is null.");
+                return;
+            }
+
+            var backStack = frame.BackStack;
+            if (backStack == null || backStack.Count == 0)
+            {
+                Debug.WriteLine("BackStack is empty.");
+                return;
+            }
+
+            Debug.WriteLine("Navigation Stack:");
+            foreach (var entry in backStack)
+            {
+                Debug.WriteLine(entry.SourcePageType.ToString());
+            }
+        }
+
+        private void MainPage_Loaded(object sender, RoutedEventArgs e)
+        {
+            PrintNavigationStack();
+            this.Focus(FocusState.Programmatic);
         }
         private void CreateGrid()
         {
@@ -122,14 +152,14 @@ namespace Game_App
             timer.Tick += Game.StartAnimation;
             timer.Tick += RedrawGrid;
             CreateGrid();
-            StopBlocksButton.IsEnabled = false;
+            //StopBlocksButton.IsEnabled = false;
             StartCountdownGame();
             
         }
 
         private async void GameOver() {
             timer.Stop();
-            ContentDialog WonDialog = new ContentDialog()
+            ContentDialog GameOverDialog = new ContentDialog()
             {
                 Title = "Game Over",
                 Content = "Sorry, You lost. Would you like to try again or return to main menu?",
@@ -137,7 +167,7 @@ namespace Game_App
                 SecondaryButtonText = "Return"
             };
 
-            ContentDialogResult Result = await WonDialog.ShowAsync();
+            ContentDialogResult Result = await GameOverDialog.ShowAsync();   // Tell the User the game is over, returns response from user, either play again or return to main menu
 
             if (Result == ContentDialogResult.Primary)
             {
@@ -169,22 +199,35 @@ namespace Game_App
 
             if(Result == ContentDialogResult.Primary)
             {
-                this.Frame.Navigate(typeof(MainPage));
+                RestartGame();
+            }
+            else
+            {
+                this.Frame.Navigate(typeof(StartPage));
             }
         }
 
-
+        private void OnBackRequested(object sender, BackRequestedEventArgs e)
+        {
+            Debug.WriteLine("Back requested");
+            if (this.Frame.CanGoBack)
+            {
+                RestartGame();
+                e.Handled = true;
+                this.Frame.GoBack();
+            }
+        }
 
         private void StartGame()
         {
             timer.Start();
-            StopBlocksButton.IsEnabled = true;
+            //StopBlocksButton.IsEnabled = true;
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
-            StopBlocksButton.IsEnabled = false;
+            //StopBlocksButton.IsEnabled = false;
             StartCountdownGame();
             
         }
@@ -204,10 +247,21 @@ namespace Game_App
             CountdownText.Visibility = Visibility.Collapsed;
         }
 
+        private void Page_StopBlocks(object sender, KeyRoutedEventArgs e)
+        {
+            Debug.WriteLine("Space pressed");
+            if (e.Key == Windows.System.VirtualKey.Space)
+            {
+            StopBlocksButton_PreviewKeyDown(sender, e);
+
+            }
+        }
+
         private void StopBlocksButton_PreviewKeyDown(object sender, KeyRoutedEventArgs e)   // User pressed space bar
         {
+            Debug.WriteLine("SpaceBar Pressed");
             GoToNextRow();
-            StopBlocksButton.IsEnabled = false;
+            //StopBlocksButton.IsEnabled = false;
         }
 
         private void GoToNextRow()
@@ -229,7 +283,7 @@ namespace Game_App
             {
                 NextRow--;
                 timer.Start();
-                StopBlocksButton.IsEnabled = true;
+                //StopBlocksButton.IsEnabled = true;
             }
         }
 
