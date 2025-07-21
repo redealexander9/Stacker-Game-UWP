@@ -78,6 +78,7 @@ namespace Game_App
         private void MainPage_Loaded(object sender, RoutedEventArgs e)
         {
             PrintNavigationStack();
+            RestartGame();
             this.Focus(FocusState.Programmatic);
         }
         private void CreateGrid()
@@ -178,9 +179,6 @@ namespace Game_App
                 this.Frame.Navigate(typeof(StartPage));
 
             }
-
-
-
 
         }
         

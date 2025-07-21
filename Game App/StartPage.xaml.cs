@@ -29,8 +29,6 @@ namespace Game_App
         {
 
             this.Frame.Navigate(typeof(MainPage));
-
-
         }
 
         private void HowToPlayButton_Click(object sender, RoutedEventArgs e)
