@@ -205,9 +205,8 @@ namespace Game_App
             }
         }
 
-        private void OnBackRequested(object sender, BackRequestedEventArgs e)
+        private void OnBackRequested(object sender, BackRequestedEventArgs e)   // User pressed back button in top left corner
         {
-            Debug.WriteLine("Back requested");
             if (this.Frame.CanGoBack)
             {
                 RestartGame();

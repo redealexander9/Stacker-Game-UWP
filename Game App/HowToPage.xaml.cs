@@ -6,6 +6,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Core;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -25,8 +26,9 @@ namespace Game_App
         {
             this.InitializeComponent();
             FocusState Focus = FocusState;
-           
-            
+            SystemNavigationManager.GetForCurrentView().BackRequested += OnBackRequested;
+
+
         }
 
         private void Grid_KeyDown(object sender, KeyRoutedEventArgs e)
@@ -40,7 +42,14 @@ namespace Game_App
 
         }
 
-       
+       private void OnBackRequested(object sender, BackRequestedEventArgs e)
+        {
+            if (this.Frame.CanGoBack)
+            {
+                e.Handled = true;
+                this.Frame.GoBack();
+            }
+        }
 
     }
 }
