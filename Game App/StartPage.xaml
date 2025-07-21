@@ -10,11 +10,10 @@
 
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="Assets/background image.jpg" Stretch="UniformToFill"/>
+            <ImageBrush ImageSource="/Assets/background image.jpg" Stretch="UniformToFill"/>
         </Grid.Background>
-        <TextBlock x:Name="GameTitleText"  HorizontalAlignment="Left" Margin="515,123,0,0" TextWrapping="Wrap" Text="Blocks" VerticalAlignment="Top" Width="480" Height="148" FontSize="72" TextAlignment="Center" Foreground="Black"/>
-        <Button x:Name="StartGameButton" Content="Start Game" Margin="337,625,0,0" VerticalAlignment="Top" Height="89" Width="382" FontSize="48" Click="StartGameButton_Click" Background="#FFA79E9E"/>
-        <Button x:Name="HowToPlayButton" Content="How to Play" Margin="875,625,0,0" VerticalAlignment="Top" Height="89" Width="382" FontSize="48" Click="HowToPlayButton_Click" Background="#FFA79E9E"/>
+        <Button x:Name="StartGameButton" Content="Start Game" Margin="134,625,0,0" VerticalAlignment="Top" Height="89" Width="382" FontSize="48" Click="StartGameButton_Click" Background="#FF00F0FF" Foreground="#FF0A0A23"/>
+        <Button x:Name="HowToPlayButton" Content="How to Play" Margin="960,625,0,0" VerticalAlignment="Top" Height="89" Width="382" FontSize="48" Click="HowToPlayButton_Click" Background="#FFFF1FAD" Foreground="#FF0A0A23"/>
 
     </Grid>
 </Page>
