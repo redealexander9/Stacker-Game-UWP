@@ -9,8 +9,8 @@
     Background="{ThemeResource AppBarItemForegroundThemeBrush}" KeyDown="Page_KeyDown">
 
     <Grid x:Name="Grid1" KeyDown="Grid_KeyDown">
-        <TextBlock HorizontalAlignment="Center" Margin="0,128,0,0" TextWrapping="Wrap" Text="How To Play" VerticalAlignment="Top" FontSize="72" Foreground="Black"/>
-        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="The game starts with a grid of varying sizes and 3 blocks on the bottom row moving back and forth, press the space bar to stop the blocks from moving. Another 3 blocks will appear on the row above the bottom row, and they will start moving. You should try to press the space bar to stop the blocks directly above the blocks on the first row. " VerticalAlignment="Center" Foreground="Black" Height="430" Width="978" FontSize="36" TextAlignment="Center"/>
+        <TextBlock HorizontalAlignment="Center" Margin="0,128,0,0" TextWrapping="Wrap" Text="How To Play" VerticalAlignment="Top" FontSize="72" Foreground="White" FocusVisualPrimaryBrush="Black"/>
+        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="The game starts with a grid of varying sizes and 3 blocks on the bottom row moving back and forth, press the space bar to stop the blocks from moving. Another 3 blocks will appear on the row above the bottom row, and they will start moving. You should try to press the space bar to stop the blocks directly above the blocks on the first row. " VerticalAlignment="Center" Foreground="White" Height="430" Width="978" FontSize="36" TextAlignment="Center"/>
 
     </Grid>
 </Page>
