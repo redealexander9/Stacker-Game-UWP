@@ -109,6 +109,9 @@ namespace Game_App
         public void DrawGrid()
         {
             int index = 0;
+            Color BackgroundColor = Color.FromArgb(255, 0, 31, 63); // Navy blue
+            Color GridLines = Color.FromArgb(80, 255, 255, 255);    // White
+            Color BlockColor = Color.FromArgb(255, 127, 219, 255);  // Sky Blue
             for (int r = 0; r < Game.GridSize; r++)
             {
                 for (int c = 0; c < Game.GridSize; c++)
@@ -116,13 +119,13 @@ namespace Game_App
                     Rectangle Rect = GameBoard.Children[index] as Rectangle;
                     if (Game.IsOn(r, c))
                     {
-                        Rect.Fill = new SolidColorBrush(Windows.UI.Colors.Gold);
-                        Rect.Stroke = new SolidColorBrush(Windows.UI.Colors.Purple);
+                        Rect.Fill = new SolidColorBrush(BlockColor);
+                        Rect.Stroke = new SolidColorBrush(GridLines);
                     }
                     else
                     {
-                        Rect.Fill = new SolidColorBrush(Windows.UI.Colors.Blue);
-                        Rect.Stroke = new SolidColorBrush(Windows.UI.Colors.Purple);
+                        Rect.Fill = new SolidColorBrush(BackgroundColor);
+                        Rect.Stroke = new SolidColorBrush(GridLines);
                     }
                     index++;
                 }
@@ -176,7 +179,7 @@ namespace Game_App
             }
             else
             {
-                this.Frame.Navigate(typeof(StartPage));
+                this.Frame.Navigate(typeof(MainMenuPage));
 
             }
 
@@ -201,7 +204,7 @@ namespace Game_App
             }
             else
             {
-                this.Frame.Navigate(typeof(StartPage));
+                this.Frame.Navigate(typeof(MainMenuPage));
             }
         }
 

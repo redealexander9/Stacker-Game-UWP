@@ -18,9 +18,9 @@ using Windows.UI.Xaml.Navigation;
 namespace Game_App
 {
     
-    public sealed partial class StartPage : Page
+    public sealed partial class MainMenuPage : Page
     {
-        public StartPage()
+        public MainMenuPage()
         {
             this.InitializeComponent();
         }
