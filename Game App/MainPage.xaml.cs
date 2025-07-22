@@ -34,6 +34,7 @@ namespace Game_App
         private StackerGame Game;
         private DispatcherTimer timer;
         private const int Speed = 100; // Speed in milliseconds
+        private bool isCountdownComplete = false;
         private int NextRow;
         public MainPage()
         {
@@ -78,7 +79,7 @@ namespace Game_App
         private void MainPage_Loaded(object sender, RoutedEventArgs e)
         {
             PrintNavigationStack();
-            RestartGame();
+            RestartGame();  
             this.Focus(FocusState.Programmatic);
         }
         private void CreateGrid()
@@ -117,12 +118,12 @@ namespace Game_App
                 for (int c = 0; c < Game.GridSize; c++)
                 {
                     Rectangle Rect = GameBoard.Children[index] as Rectangle;
-                    if (Game.IsOn(r, c))
+                    if (Game.IsOn(r, c)) // Checks if specific space on Game Board is an empty space or a block
                     {
                         Rect.Fill = new SolidColorBrush(BlockColor);
                         Rect.Stroke = new SolidColorBrush(GridLines);
                     }
-                    else
+                    else    // Background space
                     {
                         Rect.Fill = new SolidColorBrush(BackgroundColor);
                         Rect.Stroke = new SolidColorBrush(GridLines);
@@ -146,7 +147,7 @@ namespace Game_App
        
         private void RestartGame()
         {
-            GameBoard.Children.Clear();
+            GameBoard.Children.Clear();     
             timer = new DispatcherTimer
             {
                 Interval = new TimeSpan(0, 0, 0, 0, Speed)
@@ -249,20 +250,13 @@ namespace Game_App
 
         private void Page_StopBlocks(object sender, KeyRoutedEventArgs e)
         {
-            Debug.WriteLine("Space pressed");
-            if (e.Key == Windows.System.VirtualKey.Space)
+            if (e.Key == Windows.System.VirtualKey.Space && CountdownText.Text == "Go!")   // If user pressed spacebar and countdown timer is done
             {
-            StopBlocksButton_PreviewKeyDown(sender, e);
-
+                GoToNextRow();
             }
         }
 
-        private void StopBlocksButton_PreviewKeyDown(object sender, KeyRoutedEventArgs e)   // User pressed space bar
-        {
-            Debug.WriteLine("SpaceBar Pressed");
-            GoToNextRow();
-            //StopBlocksButton.IsEnabled = false;
-        }
+       
 
         private void GoToNextRow()
         {
