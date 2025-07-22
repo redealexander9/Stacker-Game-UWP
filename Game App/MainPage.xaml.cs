@@ -269,9 +269,13 @@ namespace Game_App
             Game.YPosition = 0;
             Game.Direction = 1;
             Game.IsLayerChanging = true;
-            if(NextRow == -1)   // User reached the top
+            if(NextRow == -1 && Game.NumBlocks != 0)   // User reached the top
             {
+                Debug.WriteLine(Game.NumBlocks);
                 GameWon();
+            }
+            else if(NextRow == -1 && Game.NumBlocks == 0){
+                GameOver();
             }
             else
             {
