@@ -14,7 +14,7 @@
         </Grid.Background>
         <Button x:Name="StartGameButton" Content="Start Game" Margin="155,625,0,0" VerticalAlignment="Top" Height="89" Width="382" FontSize="48" Click="StartGameButton_Click" Background="#FF00F0FF" Foreground="#FF0A0A23"/>
         <Button x:Name="HowToPlayButton" Content="How to Play" Margin="963,625,155,0" VerticalAlignment="Top" Height="89" FontSize="48" Click="HowToPlayButton_Click" Background="#FFFF1FAD" Foreground="#FF0A0A23" HorizontalAlignment="Stretch"/>
-        <Button Width="100" Height="100" Margin="35,40,0,0" VerticalAlignment="Top" ToolTipService.ToolTip="Settings">
+        <Button Width="100" Height="100" Margin="35,40,0,0" VerticalAlignment="Top" ToolTipService.ToolTip="Settings" Click="Button_Click">
             <FontIcon 
         FontFamily="Segoe MDL2 Assets" 
         Glyph="&#xE713;" 

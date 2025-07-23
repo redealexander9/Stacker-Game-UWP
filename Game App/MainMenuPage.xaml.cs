@@ -58,6 +58,11 @@ namespace Game_App
                 Debug.WriteLine(entry.SourcePageType.ToString());
             }
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 
 
