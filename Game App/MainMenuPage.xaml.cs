@@ -31,10 +31,7 @@ namespace Game_App
             this.Frame.Navigate(typeof(MainPage));
         }
 
-        private void HowToPlayButton_Click(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(HowToPage));
-        }
+        
 
         private void PrintNavigationStack()
         {
@@ -59,9 +56,14 @@ namespace Game_App
             }
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void SettingsButton_Click(object sender, RoutedEventArgs e)
         {
+            this.Frame.Navigate(typeof(SettingsPage));
+        }
 
+        private void HowToPlayButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(HowToPage));
         }
     }
 
