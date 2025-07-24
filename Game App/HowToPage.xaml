@@ -6,14 +6,38 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource AppBarItemForegroundThemeBrush}" KeyDown="Page_KeyDown">
+    Background="#FF00001E" KeyDown="Page_KeyDown">
 
     <Grid x:Name="Grid1" KeyDown="Grid_KeyDown">
-        <Grid.Background>
-            <ImageBrush ImageSource="/Assets/background image.jpg" Stretch="UniformToFill"/>
-        </Grid.Background>
-        <TextBlock Margin="561,10,561,0" TextWrapping="Wrap" Text="How To Play" VerticalAlignment="Top" FontSize="72" Foreground="White" FocusVisualPrimaryBrush="Black"/>
-        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="The game starts with a grid of varying sizes and 3 blocks on the bottom row moving back and forth, press the space bar to stop the blocks from moving. Another 3 blocks will appear on the row above the bottom row, and they will start moving. You should try to press the space bar to stop the blocks directly above the blocks on the first row. " VerticalAlignment="Top" Foreground="White" Height="430" Width="978" FontSize="36" TextAlignment="Center" Margin="268,356,0,0"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
 
+        <TextBlock x:Name="TitleText" 
+                   Grid.Row="0"
+                   TextWrapping="Wrap" 
+                   Text="How To Play" 
+                   VerticalAlignment="Top" 
+                   HorizontalAlignment="Center"
+                   FontSize="72" 
+                   Foreground="#FF00F0FF" 
+                   FocusVisualPrimaryBrush="Black"/>
+        <TextBlock x:Name="HowToDescriptionText" 
+                   Width="978"
+                   Height="450"
+                   Grid.Row="1" 
+                   VerticalAlignment="Top" 
+                   HorizontalAlignment="Center"
+                   FontSize="42" 
+                   Foreground="#FF00F0FF" 
+                   TextWrapping="Wrap" 
+                   TextAlignment="Center" >
+            Stacker is a fast-paced reflex game that challenges your timing and precision.
+            Blocks move back and forth across the screen. Your goal is to stack them as 
+            high as possible by pressing the space bar to stop them at the right moment. 
+            Only blocks that align perfectly with the row below will remain. Any overhanging parts will be sliced off!
+            Stack the blocks all the way to the top to win!
+        </TextBlock>
     </Grid>
 </Page>
