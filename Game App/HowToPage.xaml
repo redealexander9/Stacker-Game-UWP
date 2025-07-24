@@ -6,9 +6,9 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="#FF00001E" KeyDown="Page_KeyDown">
+    Background="#FF00001E">
 
-    <Grid x:Name="Grid1" KeyDown="Grid_KeyDown">
+    <Grid x:Name="Grid">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>

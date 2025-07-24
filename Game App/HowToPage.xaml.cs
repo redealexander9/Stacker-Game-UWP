@@ -15,8 +15,6 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-// The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
-
 namespace Game_App
 {
     
@@ -27,24 +25,11 @@ namespace Game_App
             this.InitializeComponent();
             FocusState Focus = FocusState;
             SystemNavigationManager.GetForCurrentView().BackRequested += OnBackRequested;
-
-
         }
 
-        private void Grid_KeyDown(object sender, KeyRoutedEventArgs e)
+       private void OnBackRequested(object sender, BackRequestedEventArgs e)    // User pressed back button
         {
-            Debug.WriteLine("jello");
-        }
-
-        private void Page_KeyDown(object sender, KeyRoutedEventArgs e)
-        {
-            Debug.WriteLine("jello");
-
-        }
-
-       private void OnBackRequested(object sender, BackRequestedEventArgs e)
-        {
-            if (this.Frame.CanGoBack)
+            if (this.Frame.CanGoBack)   // Checks if navigation stack has a previous page to return to
             {
                 e.Handled = true;
                 this.Frame.GoBack();
