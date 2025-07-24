@@ -6,14 +6,42 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="#FF00001E">
 
     <Grid>
-        <Grid.Background>
-            <ImageBrush ImageSource="/Assets/background image.jpg" Stretch="UniformToFill"/>
-        </Grid.Background>
-        <Button x:Name="StartGameButton" Content="Start Game" Margin="155,625,0,0" VerticalAlignment="Top" Height="89" Width="382" FontSize="48" Click="StartGameButton_Click" Background="#FF00F0FF" Foreground="#FF0A0A23"/>
-        <Button x:Name="HowToPlayButton" Content="How To Play" Margin="974,625,0,0" VerticalAlignment="Top" Height="89" Width="382" FontSize="48"  Background="#FFFF1FAD" Foreground="#FF0A0A23" Click="HowToPlayButton_Click"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Row="0" Grid.ColumnSpan="2"
+                   Text="Stacker"
+                   FontSize="210"
+                   Foreground="White"
+                   HorizontalAlignment="Center"
+                   Margin="0,40,0,40" SelectionChanged="TextBlock_SelectionChanged"/>
+        <StackPanel Grid.Row="1" Grid.ColumnSpan="2" VerticalAlignment="Top" HorizontalAlignment="Center" Spacing="20">
+            
+        <Button x:Name="StartGameButton" Content="Start Game"
+                Height="89" 
+                Width="382" 
+                FontSize="48" 
+                Click="StartGameButton_Click" 
+                Background="#FF00F0FF" 
+                Foreground="#FF0A0A23"/>
+            <Button x:Name="HowToPlayButton" Content="How To Play" 
+                Height="89" 
+                Width="382" 
+                FontSize="48"  
+                Background="#FFFF1FAD" 
+                Foreground="#FF0A0A23" 
+                Click="HowToPlayButton_Click"/>
+        </StackPanel>
 
         <Button x:Name="SettingsButton" Width="100" Height="100" Margin="35,40,0,0" VerticalAlignment="Top" ToolTipService.ToolTip="Settings" Click="SettingsButton_Click">
             <FontIcon 
@@ -21,6 +49,15 @@
         Glyph="&#xE713;" 
         FontSize="100" Foreground="#FF00F0FF" Margin="-25,-23,-25,-23"/>
         </Button>
+        <StackPanel Grid.Row="2" Grid.ColumnSpan="2"
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Center"
+                    Spacing="20"
+                    Margin="0,40,0,40">
+            <Rectangle Width="187" Height="115" Fill="#FF00F0FF" Stroke="Black"/>
+            <Rectangle Width="187" Height="115" Fill="#FF00F0FF" Stroke="Black"/>
+            <Rectangle Width="187" Height="115" Fill="#FF00F0FF" Stroke="Black"/>
+        </StackPanel>
 
 
     </Grid>

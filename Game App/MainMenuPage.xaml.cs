@@ -65,6 +65,11 @@ namespace Game_App
         {
             this.Frame.Navigate(typeof(HowToPage));
         }
+
+        private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 
 
