@@ -9,7 +9,7 @@
     Background="#FF00F0FF">
 
     <Grid>
-        <TextBlock x:Name="SettingsTitleText" HorizontalAlignment="Left" Margin="620,159,0,0" TextWrapping="Wrap" Text="Settings" VerticalAlignment="Top" Height="108" Width="263" FontSize="72" Foreground="#FF0A1E3C"/>
+        <TextBlock x:Name="SettingsTitleText" HorizontalAlignment="Left" Margin="620,103,0,0" TextWrapping="Wrap" Text="Settings" VerticalAlignment="Top" Height="108" Width="263" FontSize="72" Foreground="#FF0A0A23"/>
 
     </Grid>
 </Page>

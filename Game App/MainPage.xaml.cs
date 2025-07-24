@@ -33,7 +33,7 @@ namespace Game_App
     {
         private StackerGame Game;
         private DispatcherTimer timer;
-        private const int Speed = 100; // Speed in milliseconds
+        private int Speed = 100; // Speed in milliseconds
         private bool isCountdownComplete = false;
         private int NextRow;
         public MainPage()
@@ -147,6 +147,7 @@ namespace Game_App
        
         private void RestartGame()
         {
+            Speed = 100;
             GameBoard.Children.Clear();     
             timer = new DispatcherTimer
             {
@@ -260,6 +261,7 @@ namespace Game_App
 
         private void GoToNextRow()
         {
+            Speed += 10;
             if (NextRow < 8) // Game is on second row 
             {
                 Game.SubtractBlocks(Game.CurrentPosition);
