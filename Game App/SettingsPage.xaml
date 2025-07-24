@@ -9,7 +9,32 @@
     Background="#FF00F0FF">
 
     <Grid>
-        <TextBlock x:Name="SettingsTitleText" HorizontalAlignment="Left" Margin="620,103,0,0" TextWrapping="Wrap" Text="Settings" VerticalAlignment="Top" Height="108" Width="263" FontSize="72" Foreground="#FF0A0A23"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            
+        </Grid.RowDefinitions>
+        <TextBlock x:Name="SettingsTitleText" 
+                   HorizontalAlignment="Center" 
+                   TextWrapping="Wrap" 
+                   Text="Settings" 
+                   Grid.Row="0"
+                   VerticalAlignment="Top" 
+                   Height="108" Width="263" 
+                   FontSize="72" 
+                   Foreground="#FF0A0A23"/>
+        
+        <TextBlock HorizontalAlignment="Center" Grid.Row="1" TextWrapping="Wrap" Text="Block Movement Speed:" VerticalAlignment="Center" Margin="0,0,179,0" FontSize="16"/>
+        <Slider x:Name="SpeedSlider" HorizontalAlignment="Center" 
+                Grid.Row="1"
+                VerticalAlignment="Center" 
+                Width="360" Height="36" 
+                Value="1" Maximum="5" 
+                Minimum="1" 
+                Background="#FF00001E" 
+                TickFrequency="1" Margin="0,51,0,0"/>
+
+
 
     </Grid>
 </Page>
