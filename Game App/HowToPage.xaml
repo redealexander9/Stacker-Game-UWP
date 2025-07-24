@@ -36,8 +36,8 @@
             Stacker is a fast-paced reflex game that challenges your timing and precision.
             Blocks move back and forth across the screen. Your goal is to stack them as 
             high as possible by pressing the space bar to stop them at the right moment. 
-            Only blocks that align perfectly with the row below will remain. Any overhanging parts will be sliced off!
-            Stack the blocks all the way to the top to win!
+            Only blocks that align perfectly with the row below will remain. Any overhanging 
+            parts will be sliced off! Stack the blocks all the way to the top to win!
         </TextBlock>
     </Grid>
 </Page>
