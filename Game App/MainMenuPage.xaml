@@ -52,11 +52,11 @@
         <StackPanel Grid.Row="2" Grid.ColumnSpan="2"
                     Orientation="Horizontal"
                     HorizontalAlignment="Center"
-                    Spacing="20"
+                    Spacing="5"
                     Margin="0,40,0,40">
-            <Rectangle Width="187" Height="115" Fill="#FF00F0FF" Stroke="Black"/>
-            <Rectangle Width="187" Height="115" Fill="#FF00F0FF" Stroke="Black"/>
-            <Rectangle Width="187" Height="115" Fill="#FF00F0FF" Stroke="Black"/>
+            <Rectangle Width="115" Height="115" Fill="#FF00F0FF" Stroke="Black"/>
+            <Rectangle Width="115" Height="115" Fill="#FF00F0FF" Stroke="Black"/>
+            <Rectangle Width="115" Height="115" Fill="#FF00F0FF" Stroke="Black"/>
         </StackPanel>
 
 
