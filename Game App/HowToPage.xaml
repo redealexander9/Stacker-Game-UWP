@@ -12,6 +12,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
         <TextBlock x:Name="TitleText" 
@@ -27,7 +28,7 @@
                    Width="978"
                    Height="450"
                    Grid.Row="1" 
-                   VerticalAlignment="Top" 
+                   VerticalAlignment="Center" 
                    HorizontalAlignment="Center"
                    FontSize="42" 
                    Foreground="#FF00F0FF" 
@@ -39,5 +40,15 @@
             Only blocks that align perfectly with the row below will remain. Any overhanging 
             parts will be sliced off! Stack the blocks all the way to the top to win!
         </TextBlock>
+        <Button x:Name="PlayNowButton" 
+            Content="Play Now!"
+            HorizontalAlignment="Center"
+            Grid.Row="2"
+            Height="89" 
+            Width="382" 
+            FontSize="48"
+            Background="#FF00F0FF" 
+            Foreground="#FF0A0A23"
+            Margin="0,20,0,40" Click="PlayNowButton_Click"/>
     </Grid>
 </Page>
