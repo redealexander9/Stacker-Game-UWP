@@ -25,7 +25,7 @@
                    Foreground="#FF0A0A23"/>
 
         <TextBlock HorizontalAlignment="Left" Grid.Row="1" TextWrapping="Wrap" Text="Speed:" VerticalAlignment="Top" Margin="413,88,0,0" FontSize="36"/>
-        <ComboBox Margin="0,88,0,0" Grid.Row="1" Width="451" Height="54" HorizontalAlignment="Center">
+        <ComboBox x:Name="GameSpeedComboBox" Margin="0,88,0,0" Grid.Row="1" Width="451" Height="54" HorizontalAlignment="Center" SelectionChanged="GameSpeedComboBox_SelectionChanged">
             <ComboBoxItem Content="Slow"/>
             <ComboBoxItem Content="Normal" IsSelected="True"/>
             <ComboBoxItem Content="Fast"/>

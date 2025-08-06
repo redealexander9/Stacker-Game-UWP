@@ -26,5 +26,10 @@ namespace Game_App
         {
             this.InitializeComponent();
         }
+
+        private void GameSpeedComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }
