@@ -12,7 +12,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
-            
+
         </Grid.RowDefinitions>
         <TextBlock x:Name="SettingsTitleText" 
                    HorizontalAlignment="Center" 
@@ -23,16 +23,13 @@
                    Height="108" Width="263" 
                    FontSize="72" 
                    Foreground="#FF0A0A23"/>
-        
-        <TextBlock HorizontalAlignment="Center" Grid.Row="1" TextWrapping="Wrap" Text="Block Movement Speed:" VerticalAlignment="Center" Margin="0,0,179,0" FontSize="16"/>
-        <Slider x:Name="SpeedSlider" HorizontalAlignment="Center" 
-                Grid.Row="1"
-                VerticalAlignment="Center" 
-                Width="360" Height="36" 
-                Value="1" Maximum="5" 
-                Minimum="1" 
-                Background="#FF00001E" 
-                TickFrequency="1" Margin="0,51,0,0"/>
+
+        <TextBlock HorizontalAlignment="Left" Grid.Row="1" TextWrapping="Wrap" Text="Speed:" VerticalAlignment="Top" Margin="413,88,0,0" FontSize="36"/>
+        <ComboBox Margin="0,88,0,0" Grid.Row="1" Width="451" Height="54" HorizontalAlignment="Center">
+            <ComboBoxItem Content="Slow"/>
+            <ComboBoxItem Content="Normal" IsSelected="True"/>
+            <ComboBoxItem Content="Fast"/>
+        </ComboBox>
 
 
 
