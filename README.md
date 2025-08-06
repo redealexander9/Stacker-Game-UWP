@@ -5,4 +5,4 @@ The goal is to stack blocks all the way to the top. The blocks move back and for
 I implemented a custom animation system that controls block movement, frame updates, user input, and timing. 
 This game does not rely on built-in animation tools like Storyboard or Composition; instead, it uses a canvas that I 
 manipulate by drawing each frame manually.
-![Game Play Screen](./Game%20App/Images/GamePlayScreen.png)
+![Game Play Screen](Game%20App/Images/GamePlayScreen.png)
